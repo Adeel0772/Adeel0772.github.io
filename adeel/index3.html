@@ -1,0 +1,340 @@
+@extends('fronts.layouts.app')
+@section('front-title')
+    {{ __('messages.web.medical') }}
+@endsection
+@section('front-content')
+    @php
+        $styleCss = 'style';
+    @endphp
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital Information</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .hospital-info {
+        flex-basis: 60%;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .small-container {
+        flex-basis: 22%;
+        background-color: #cedfe4;
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #a6dfeb;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .small-container:hover {
+        transform: scale(1.05);
+    }
+
+    .book-appointment {
+        background-color: #aa3d2f;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: auto; /* Add this line to fix the button to the bottom */
+    }
+</style>
+
+</head>
+<body>
+  <br><br><br><br><br><br>
+
+    <h1 style="text-align: center;">WAH CANTT</h1>
+    <br>
+
+  <div class="container">
+    <div class="hospital-info">
+      <img src="{{ asset('images/city.jpg') }}" alt="Hospital Image" width="200">
+      <h2>City Hospital</h2>
+      <p>Contact: (051)4540425</p>
+      <p>Address: A-23/1 Quaid Avenue Near Akhri Stop The Mall, Lala Rukh (Basti), Wah Cantt</p>
+      
+      <div class="flex-container">
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr. Sher Dil Khan</h3>
+          <p>Orthopedic Surgeon MBBS, FCPS (Orthopedic Surgery)</p>
+          <p>(051)4540425</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr. Asif Aslam</h3>
+          <p>Pediatrics</p>
+          <p>0344-1244555</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr. Kashif Alam</h3>
+          <p>Orthopedics</p>
+          <p>0321-3342947</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr. Sarah Ayob</h3>
+          <p>Dermatology</p>
+          <p>0334-2348292</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  
+
+
+  <div class="container">
+    <div class="hospital-info">
+      <img src="{{ asset('images/alilaj.jpg') }}" alt="Hospital Image" width="200">
+      <h2>Al Elaj Hospital</h2>
+      <p>Contact: 0344-5515989</p>
+      <p>Address: Quaid Avenue, Wah Cantt, Uppal Square, Wah Cantt</p>
+      
+      <div class="flex-container">
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Ms. Rabia Kashaf</h3>
+          <p>Psychologist,| BS (Hons) Psychology | Advanced Diploma in Clinical Psychology (ADCP) |</p>
+          <p>(051)8744409</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+
+<div class="container">
+    <div class="hospital-info">
+      <img src="{{ asset('images/Idc Aslam Uppal Diagnostic Centre Wah Cantt.png') }}" width="200">
+      <h2> Idc Aslam Uppal Diagnostic Centre Wah Cantt</h2>
+      <p>Contact: (051)4511765</p>
+      <p>Address: 3-Quaid Avenue, Near Aslam Uppal Square, Lalazar wah Cantt, Shah Wali Colony, Wah Cantt</p>
+      
+      <div class="flex-container">
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr. Rehan Uppal</h3>
+          <p>Medical Specialist, Diabetologist,MBBS, MCPS, MRCGP (UK), MAAFP (USA)</p>
+          <p>(051)4511765</p>
+          <button  class="book-appointment">Book Appointment</button>
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+
+  <div class="container">
+    <div class="hospital-info">
+      <img src="{{ asset('images/Al Aain Hospital.jpg') }}" alt="Hospital Image" width="200">
+      <h2>Al Aain Hospital</h2>
+      <p>Contact: 0332-6469860</p>
+      <p>Address:  Main GT Road, Near Barrier No. 2, Wah Cantt</p>
+      
+      <div class="flex-container">
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Mr. Haseeb Ur Rehman</h3>
+          <p>Nutritionist,MS (Human Nutrition and Dietitics)</p>
+          <p>0332-6469860</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Ms. Mahrukh Iram</h3>
+          <p>Physiotherapist,DPT</p>
+          <p>033-26469860</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Ms. Rabia Kashaf</h3>
+          <p>Psychologist,| BS (Hons) Psychology | Advanced Diploma in Clinical Psychology (ADCP) |</p>
+          <p>3326469860</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+
+
+  <div class="container">
+    <div class="hospital-info">
+      <img src="{{ asset('images/Eman Hospital Wah Cantt.jpg') }}" alt="Hospital Image" width="200">
+      <h2>Eman Hospital Wah Cantt</h2>
+      <p>Contact: 0300-5497673</p>
+      <p>Address: Near Uppal Chowk, Shahwali Road, Wah Cantt</p>
+      
+      <div class="flex-container">
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr. Maria Hamid</h3>
+          <p>Physiotherapist,DPT</p>
+          <p>0300-5497673</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+
+
+  <div class="container">
+    <div class="hospital-info">
+      <img src="{{ asset('images/hospital1.jpg') }}" alt="Hospital Image" width="200">
+      <h2>Nayab Surgical Hospital</h2>
+      <p>Contact: 0333-5124496</p>
+      <p>Address: Wah Cantt, Rawalpindi, Wah Cantt, Wah Cantt</p>
+      
+      <div class="flex-container">
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Ms Nargis Shaheen</h3>
+          <p>Psychologist,MSc Psychology, Advanced Diploma in Clinical Psychology</p>
+          <p>0333-5124496</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+        <div class="small-container">
+          <img src="{{ asset('images/d1.jpg') }}" alt="Doctor Icon" width="100">
+          <h3>Dr.</h3>
+          <p>Specialization:</p>
+          <p>Number:</p>
+          <a href="{{ route('medicalAppointment') }}" class="book-appointment">Book Appointment</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
